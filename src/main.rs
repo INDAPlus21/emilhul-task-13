@@ -13,13 +13,13 @@ use std::io::prelude::*;
 use rand::Rng;
 
 fn main() {
-    //Setting up initial variables
-    let width: usize = 400; //X pixel count
-    let height: usize = 200; //Y pixel count
-    let samples_per_pixel: usize = 100;
+    // Setting up initial variables
+    let width: usize = 1000; // Width in pixxls
+    let height: usize = 500; // Height in pixels
+    let samples_per_pixel: usize = 100; // Number of Rays per pixel
     let max_depth = 50;
 
-    let mut p3: String = String::new(); //String holding ppm information
+    let mut p3: String = String::new(); // String holding ppm information
     p3.push_str(&format!("P3\n{} {}\n255\n", width, height));
 
     let cam: Camera = Camera::new();

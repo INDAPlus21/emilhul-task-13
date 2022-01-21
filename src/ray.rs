@@ -27,7 +27,7 @@ impl Ray {
     }
 
     /// ## color
-    /// Returns a Color (Vector3 type) depending on what the ray hits. 
+    /// Returns a Color (Vector3 type) depending on if the ray hits and how it bounces.. 
     pub fn color(ray: &Ray, scene: &Scene, depth: usize) -> Color {
         let mut hit_rec: HitRecord = HitRecord::new();
         if depth == 0 {return Vector3::new(0.0, 0.0, 0.0);}
